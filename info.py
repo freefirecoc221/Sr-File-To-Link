@@ -11,7 +11,7 @@ id_pattern = re.compile(r'^.\d+$')
 SESSION = environ.get('SESSION', 'MdSahadatHossenBot')
 API_ID = int(environ.get('API_ID', '29608422'))
 API_HASH = environ.get('API_HASH', '3db2f8e109301f02f5d9c8f10dd79244')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+BOT_TOKEN = environ.get('BOT_TOKEN', "8765885559:AAG3BlSW6WjPNnT4FzAfHXPw48YHgbx9PZU")
 
 # Bot settings
 PORT = environ.get("PORT", "8080")
@@ -24,14 +24,14 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://srfiletolink-jg4wsqpa.b4a.run/")
 
 # Admins, Channels & Users
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1004450462812'))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '8056243176').split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://sabbirvai1122:SABBIRVAI1122@cluster0.t1bsiei.mongodb.net/?appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "mdsahadathossenbot")
 
 # Shortlink Info
