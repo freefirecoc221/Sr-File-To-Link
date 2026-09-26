@@ -2,15 +2,14 @@
 # Subscribe YouTube Channel: https://youtube.com/@loveranyanime?si=3sJqjGIXzfI7EyWp
 # telegram channel: @ss_anime_box
 
-FROM python:3.10.8-slim-buster
+FROM python:3.10-slim-bullseye
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
+WORKDIR /app
 
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /MdSahadatBot
-WORKDIR /MdSahadatBot
-COPY . /MdSahadatBot
-CMD ["python", "bot.py"]
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["python3", "bot.py"]
