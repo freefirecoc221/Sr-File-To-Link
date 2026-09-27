@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for sr-file-to-link on 2026-09-27T03:23:59Z
+# fly.toml app configuration file generated for sr-file-to-link-c-uota on 2026-09-27T03:37:19Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'sr-file-to-link'
+app = 'sr-file-to-link-c-uota'
 primary_region = 'ams'
 
 [build]
